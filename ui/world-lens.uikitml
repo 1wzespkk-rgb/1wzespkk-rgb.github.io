@@ -1,0 +1,91 @@
+<!-- World Lens panel: place info + dive/orbit/navigation controls. -->
+<style>
+  .panel-root {
+    flex-direction: column;
+    width: 420px;
+  }
+
+  .panel-content {
+    flex-direction: column;
+    gap: 7px;
+    padding: 22px;
+  }
+
+  .eyebrow {
+    color: #6b5a00;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+  }
+
+  .eyebrow:dark {
+    color: #f5d90a;
+  }
+
+  .heading {
+    color: #1c1d20;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  .heading:dark {
+    color: #fafaf7;
+  }
+
+  .body {
+    color: #3a3b40;
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .body:dark {
+    color: #dddfe3;
+  }
+
+  .button {
+    justify-content: flex-start;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 10px;
+  }
+
+  .button-label {
+    transform-translate-y: 1px;
+    color: #1c1d20;
+  }
+</style>
+<Panel class="panel-root">
+  <div class="panel-content">
+    <div class="eyebrow">WORLD LENS</div>
+    <div class="heading">563 places - 47 routes</div>
+    <div class="body" id="place-info">Hover a dot to pick a place.</div>
+  </div>
+  <Button id="dive-button" class="button">
+    <ButtonLabel class="button-label">Dive in</ButtonLabel>
+  </Button>
+  <Button id="orbit-button" class="button">
+    <ButtonLabel class="button-label">Back to orbit</ButtonLabel>
+  </Button>
+  <Button id="next-button" class="button">
+    <ButtonLabel class="button-label">Next place</ButtonLabel>
+  </Button>
+  <Button id="prev-button" class="button">
+    <ButtonLabel class="button-label">Previous place</ButtonLabel>
+  </Button>
+  <Button id="region-button" class="button">
+    <ButtonLabel id="region-label" class="button-label">Region: All</ButtonLabel>
+  </Button>
+  <Button id="xr-button" class="button">
+    <ButtonIcon>
+      <RectangleGoggles></RectangleGoggles>
+    </ButtonIcon>
+    <ButtonLabel class="button-label">Enter XR</ButtonLabel>
+  </Button>
+  <Button id="exit-button" class="button" style="display: none">
+    <ButtonIcon>
+      <LogIn></LogIn>
+    </ButtonIcon>
+    <ButtonLabel class="button-label">Exit to Browser</ButtonLabel>
+  </Button>
+</Panel>
